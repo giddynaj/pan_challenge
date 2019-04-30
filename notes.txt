@@ -21,3 +21,11 @@ Modify App.js
   componentDidMounth method
   render map
   
+
+
+start ror with:
+rails s -p 3001
+
+
+start act (React) with:
+yarn start

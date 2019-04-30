@@ -4,6 +4,7 @@ class PanjivaApi
 
   def self.get(type, args={})
     uri = URI.parse(self.build_query(type, args))
+    Rails.logger.debug(self.build_query(type, args))
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
     req = Net::HTTP::Get.new(uri.to_s)
@@ -14,7 +15,8 @@ class PanjivaApi
   def self.build_query(type, args={})
     case type
     when 'supplier'
-      SUPPLIER_URL + '?query=cow+leather&offset=0&limit=2'
+      keywords = args[:keywords].gsub(" ", "+")
+      SUPPLIER_URL + "?query=#{keywords}&offset=0&limit=10"
     when 'company'
       COMPANY_URL + args[:id].to_s
     end
