@@ -1,0 +1,23 @@
+rails new Name --api
+rails g scaffold Model attributes
+Move controllers to an api/v1 directory
+Add module Api::V1 to controller
+Add to config/routes.rb
+Add seed to db/seeds.rb
+rails db:create
+rails db:migrate
+
+
+npx create-react-app Name
+add proxy to package.json
+sudo yarn add axios shards-react
+Modify App.js
+  import axios
+  change function to class
+  setup constructor
+    bind state, and methods to this
+  add method
+  delete method
+  componentDidMounth method
+  render map
+  
