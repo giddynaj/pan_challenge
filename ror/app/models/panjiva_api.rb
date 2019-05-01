@@ -8,7 +8,7 @@ class PanjivaApi
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
     req = Net::HTTP::Get.new(uri.to_s)
-    req['AUTHORIZATION'] = 'Bearer 0LTJmRfrmfrRoMzGkFGZNAp9x5NDFwZqQnygiHoS'
+    req['AUTHORIZATION'] = 'Bearer vxuchVQB5qUYmgcU5tQnogLOWTDqq8SByMujF3VM'
     res = http.request(req) 
   end
 

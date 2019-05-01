@@ -63,6 +63,9 @@ class App extends Component {
           }}
           onMapLoad={map => this.setMarkers(map)}
       />
+      <ul >
+      { this.state.results.map (company => <li style={{textAlign: 'left'}}>{ company.results.name } Lat:{ company.results.address.latitude } Lon: { company.results.address.longitude } </li>)}
+      </ul>
     </div>
   )};
 }
